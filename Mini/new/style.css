@@ -1,0 +1,387 @@
+/* --- Global Styles & Variables --- */
+:root {
+    --primary-color: #002244;
+    --secondary-color: #1a416b;
+    --accent-color: #f7a01d;
+    --text-light: #ecf0f1;
+    --text-dark: #34495e;
+    --background-color: #f4f7f9;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- Header & Navigation Bar --- */
+.main-header {
+    background-color: var(--primary-color);
+    box-shadow: var(--shadow-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.nav-logo img {
+    height: 60px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.main-nav ul li a {
+    color: var(--text-light);
+    padding: 15px 20px;
+    display: block;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+    background-color: var(--secondary-color);
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.nav-btn-primary, .nav-btn-secondary {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.nav-btn-primary:hover {
+    background-color: #e28e2d;
+}
+
+.nav-btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+}
+
+.nav-btn-secondary:hover {
+    background-color: #14324f;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+/* --- Main Content Eligibility Checker Specific --- */
+.eligibility-main {
+    max-width: 800px; /* Adjust max-width for the checker */
+    margin: 40px auto; /* More margin for standalone app */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow-light);
+}
+
+.eligibility-checker-section .container {
+    padding: 20px;
+}
+
+.eligibility-checker-section h2 {
+    color: var(--primary-color);
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 2.2rem;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="number"]:focus,
+.form-group select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(247, 160, 29, 0.2);
+    outline: none;
+}
+
+.check-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.check-btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #e6f7ff; /* Light blue for results */
+    border: 1px solid #99d6ff;
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+.result-box.eligible {
+    background-color: #e8f5e9; /* Light green for eligible */
+    border-color: #a5d6a7;
+}
+
+.result-box.not-eligible {
+    background-color: #ffebee; /* Light red for not eligible */
+    border-color: #ef9a9a;
+}
+
+.result-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.result-box p {
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.85em;
+    margin-top: 5px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Footer Styling (from your previous code) --- */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 40px 20px;
+    margin-top: 50px; /* Add some space above the footer */
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+    min-width: 150px;
+}
+
+.footer-about {
+    flex: 2;
+    margin-right: 30px;
+}
+
+.footer-logo {
+    max-width: 80px;
+    margin-bottom: 15px;
+}
+
+.mission-statement {
+    font-size: 0.9em;
+    max-width: 350px;
+    justify-content: center;
+}
+
+.footer-links, .footer-social {
+    flex: 1;
+}
+
+.footer-links h4, .footer-social h4 {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-weight: bold;
+    text-align: left;
+}
+
+.footer-links ul, .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li, .footer-social li {
+    margin-bottom: 10px;
+}
+
+.footer-links a, .footer-social a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    text-align: left; /* Changed from center to left */
+}
+
+.footer-links a:hover, .footer-social a:hover {
+    color: var(--accent-color);
+}
+
+.footer-social img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 0.85em;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: var(--text-light);
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+/* --- Responsive Layout for Mobile --- */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 80px; /* Adjust based on header height */
+        left: 0;
+        padding-bottom: 20px;
+    }
+    .main-nav.active {
+        display: flex;
+    }
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    .main-nav ul li a {
+        padding: 10px 0;
+        border-bottom: 1px solid var(--secondary-color);
+    }
+    .main-nav .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .nav-btn-primary, .nav-btn-secondary {
+        width: 90%;
+        text-align: center;
+    }
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .eligibility-main {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .eligibility-checker-section h2 {
+        font-size: 1.8rem;
+    }
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-section {
+        margin-bottom: 30px;
+    }
+    .footer-about {
+        margin-right: 0;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}

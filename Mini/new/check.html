@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Mini/style2.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="/Mini/assests/MNP.png" alt="MNP Logo">
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="/Mini/home.html">Home</a></li>
+                    <li><a href="/Mini/about.html">About</a></li>
+                    <li><a href="#">Academic</a></li>
+                    <li><a href="#">Infrastructure</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="/Mini/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="eligibility-main">
+        <section class="eligibility-checker-section">
+            <div class="container">
+                <h2>College Eligibility Checker</h2>
+                <div class="form-group">
+                    <label for="class12Percentage">Class 12 Percentage (%)</label>
+                    <input type="number" id="class12Percentage" min="0" max="100" placeholder="Enter your percentage" required>
+                    <div id="percentage-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="streamSelect">Select Stream</label>
+                    <select id="streamSelect" required>
+                        <option value="">-- Choose Stream --</option>
+                        <option value="Science">Science</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Arts">Arts</option>
+                        <option value="Engineering">Engineering</option>
+                    </select>
+                    <div id="stream-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group hidden" id="subjectGroup">
+                    <label for="subjectSelect">Select Subjects (for Science/Engineering)</label>
+                    <select id="subjectSelect">
+                        <option value="">-- Choose Subject Combination --</option>
+                        <option value="PCM">PCM (Physics, Chemistry, Math)</option>
+                        <option value="PCB">PCB (Physics, Chemistry, Biology)</option>
+                    </select>
+                    <div id="subject-error" class="error-message"></div>
+                </div>
+
+                <button id="checkEligibilityBtn" class="check-btn">Check Eligibility</button>
+
+                <div id="eligibilityResult" class="result-box hidden">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-section footer-about">
+                <img src="/Mini/assests/MNP.png" alt="College Logo" class="footer-logo">
+                <p class="mission-statement"><h3>Institute Official</h3>A partner in modern education. Our mission is to simplify campus management and empower a smarter, more connected college community.</p>
+            </div>
+            <div class="footer-section footer-links">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="/Mini/index.html">Admissions Portal</a></li>
+                    <li><a href="/Mini/dashboard.html">Student Dashboard</a></li>
+                    <li><a href="#">Faculty Login</a></li>
+                    <li><a href="#">IT Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><img src="/Mini/assests/icons8-facebook-50.png" alt="Facebook Icon"> Facebook</a></li>
+                    <li><a href="#"><img src="/Mini/assests/icons8-twitter-50.png" alt="Twitter Icon"> Twitter</a></li>
+                    <li><a href="#"><img src="/Mini/assests/icons8-linkedin-50.png" alt="LinkedIn Icon"> LinkedIn</a></li>
+                    <li><a href="#"><img src="/Mini/assests/icons8-youtube-50.png" alt="YouTube Icon"> YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-contact">
+                <p>123 College Avenue, City, State, ZIP Code | (555) 123-4567</p>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2025 MNP Institute All Rights Reserved.| <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+<script src="app.js"></script>
+<!-- <script>
+    function showPopup(message, type = 'info', duration = 3000) {
+    const popup = document.getElementById('popup');
+    const msgSpan = document.getElementById('popup-message');
+    popup.className = `popup ${type}`; // add type class
+    msgSpan.textContent = message;
+    popup.classList.remove('hidden');
+
+    if (duration > 0) {
+        setTimeout(() => {
+            popup.classList.add('hidden');
+        }, duration);
+    }
+}
+</script> -->
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">    
+</head>
+<body>
+    <header class="main-header">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="/Mini/assests/MNP.png" alt="MNP Logo">
+            </a>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#">Infrastructure</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/Mini/new/check.html">New Admission</a></li>
+                    <!-- <li><a href="dashboard.html">Dashboard</a></li> -->
+                </ul>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+  <section class="contact-header">
+    <h1>About Us</h1>
+  </section>
+
+        <main>
+            <section class="content-section">
+                <div class="container">
+                    <h2>who we're</h2>
+                    <p> Our College Management System is an all-in-one digital platform designed to simplify and enhance the administration of educational institutions. We've created a powerful, intuitive solution to streamline daily operations, connect campus communities, and foster a better learning environment.
+                    For administrators, our system automates time-consuming tasks like admissions, student records, and fee management, freeing up valuable time and resources. For faculty, we provide tools to effortlessly manage courses, track attendance, and communicate with students. For students, the platform offers easy access to their academic progress, course registration, and important campus announcements.
+                    Our mission is to help colleges and universities thrive by providing a robust, efficient, and user-friendly system that removes technical barriers and allows everyone to focus on their primary goal: education.
+                    </p>
+                </div>
+            </section>
+            <section class="content-section">
+                <div class="container">
+                    <h2>About Our College Management System</h2>
+                    <p> Our College Management System is a comprehensive digital solution designed to streamline and enhance every aspect of academic and administrative operations. 
+                    Developed with the needs of modern educational institutions in mind, our platform provides a centralized hub for managing student admissions, course registration, attendance tracking, and grading.    We aim to eliminate manual processes, reduce administrative overhead, and provide faculty, staff, and students with the tools they need to succeed. Our system offers powerful features for communication, data analysis, and reporting, ensuring that all stakeholders have access to timely and accurate information. By integrating key functions into a single, intuitive interface, we help colleges and universities operate more efficiently and focus on what truly matters: providing an exceptional educational experience.
+                    </p>
+                </div>
+            </section>     
+        </main>
+
+<div id="popup" class="popup hidden">
+  <span id="popup-message"></span>
+  <button onclick="closePopup()" class="close-btn">&times;</button>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-section footer-about">
+            <img src="/Mini/assests/MNP.png" alt="College Logo" class="footer-logo">
+            
+            <p class="mission-statement"><h3>Institute Official</h3> <br>A partner in modern education. Our mission is to simplify campus management and empower a smarter, more connected college community.</p>
+        </div>
+        <div class="footer-section footer-links">
+            <h4>Explore</h4>
+            <ul>
+                <li><a href="index.html">Admissions Portal</a></li>
+                <li><a href="dashboard.html">Student Dashboard</a></li>
+                <li><a href="#">Faculty Login</a></li>
+                <li><a href="#">IT Support</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-section footer-social">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#"><img src="/Mini/assests/icons8-facebook-50.png" alt="Facebook Icon"> Facebook</a></li>
+                <li><a href="#"><img src="/Mini/assests/icons8-twitter-50.png" alt="Twitter Icon"> Twitter</a></li>
+                <li><a href="#"><img src="/Mini/assests/icons8-linkedin-50.png" alt="LinkedIn Icon"> LinkedIn</a></li>
+                <li><a href="#"><img src="/Mini/assests/icons8-youtube-50.png" alt="YouTube Icon"> YouTube</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-contact">
+            <p>123 College Avenue, City, State, ZIP Code | (555) 123-4567</p>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2025 MNP Institute All Rights Reserved.| <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+        </div>
+    </div>
+</footer>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainNav = document.getElementById('main-nav');
+
+    if (menuToggle && mainNav) {
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+    }
+});
+
+function showPopup(message, type = 'info', duration = 3000) {
+    const popup = document.getElementById('popup');
+    const msgSpan = document.getElementById('popup-message');
+    popup.className = `popup ${type}`; // add type class
+    msgSpan.textContent = message;
+    popup.classList.remove('hidden');
+
+    if (duration > 0) {
+        setTimeout(() => {
+            popup.classList.add('hidden');
+        }, duration);
+    }
+}
+
+</script>
+</body>
+</html>
